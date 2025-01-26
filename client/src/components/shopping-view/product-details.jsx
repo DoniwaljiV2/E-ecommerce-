@@ -29,6 +29,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
   const { cartItems } = useSelector((state) => state.shopCart);
   const { reviews } = useSelector((state) => state.shopReview);
 
+
   function handleRatingChange(getRating) {
     setRating(getRating);
   }
@@ -116,7 +117,8 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
         reviews.length
       : 0;
 
-    
+      
+  
       
   return (
     <Dialog open={open} onOpenChange={handleDialogClose}>
