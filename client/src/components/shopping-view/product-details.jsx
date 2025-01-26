@@ -83,15 +83,7 @@ function ProductDetailsDialog({ open, setOpen, productDetails }) {
   }
 
   function handleAddReview() {
-    const hasPurchased = cartItems.items.some(item => item.productId === productDetails?._id);
-
-    if (!hasPurchased) {
-      toast({
-        title: "You must purchase this product before leaving a review.",
-        variant: "destructive",
-      });
-      return;
-    }
+    
     dispatch(
       addReview({
         productId: productDetails?._id,
